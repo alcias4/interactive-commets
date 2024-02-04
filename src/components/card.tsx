@@ -9,9 +9,10 @@ interface Props {
   handleReply:()=>void
   handleAddtion: (id: number, replies:number | null) => void
   handleSubtraction: (id: number, replies:number | null) => void
+  handleEdit:(id:number, replies:number| null)=>void
 }
 
-export const Card:React.FC<Props> = ({ info,index ,user, handleDelete,handleReply,handleAddtion, handleSubtraction, subInd}) => {
+export const Card:React.FC<Props> = ({ info,index ,user, handleDelete,handleReply,handleAddtion, handleSubtraction, subInd, handleEdit}) => {
   
   return (   
     <div key={info.id + 100} className="card subCard">
@@ -37,18 +38,19 @@ export const Card:React.FC<Props> = ({ info,index ,user, handleDelete,handleRepl
             <div className="edit">
               <button onClick={()=>handleDelete(info.id,index)}>
                 <img src="./images/icon-delete.svg" alt="" />
-                Delete
+                <p>Delete</p>
               </button>
-              <button>
-              <img src="./images/icon-edit.svg" alt="" />
-                Edit
+              <button onClick={()=> handleEdit(info.id, index)}>
+              <img 
+                src="./images/icon-edit.svg" alt="" />
+                <p>Edit</p>
               </button>
             </div>:
             <button 
               onClick={handleReply}
               className="reply">
               <img src="./images/icon-reply.svg" alt="icon of button" />
-              reply
+              <p>Reply</p>
             </button>
           }
         </section>

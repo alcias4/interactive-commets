@@ -6,6 +6,7 @@
   border-radius: 10px;
   cursor: default;
   min-height: 135px;
+  position: relative;
 }
 
 .card-button{
@@ -16,12 +17,20 @@
   min-width: 40px;
   border: none;
   border-radius: 8px;
-  font-size: 18px;
+  font-size: 15px;
+  background-color: #f5f5fc;
+  color: #5358b6;
+  font-weight: 600;
 }
 
 .card-button img {
   cursor: pointer;
   width: 15px;
+  transition: all 500ms ease;
+}
+
+.card-button img:hover {
+  scale: 1.2;
 }
 
 .card-info{
@@ -61,6 +70,11 @@
   border: none;
   background: transparent;
   cursor: pointer;
+  transition: all 400ms ease;
+}
+
+.edit button:hover {
+  opacity: 0.5;
 }
 
 .edit button img {
@@ -99,6 +113,11 @@
   font-size: 15;
   font-weight: 600;
   color: #6c6ba4;
+  transition: all 500ms ease;
+}
+
+.reply:hover {
+  opacity: 0.5;
 }
 
 .reply img {
@@ -158,3 +177,6 @@
 .replyCard button:hover {
   opacity: 0.5;
 }
+
+
+

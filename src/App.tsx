@@ -17,7 +17,7 @@ function App() {
   })
   
   const {handleAddtion, handleSubtraction} = logicScore(data, setDate)
-  const {handleDelete, handleReplies, handleChanceComment} = logicComments(data, setDate)
+  const {handleDelete, handleReplies, handleChanceComment, handleEdit} = logicComments(data, setDate)
 
   useEffect(()=>{
     localStorage.setItem('data', JSON.stringify(data))
@@ -33,6 +33,7 @@ function App() {
         handleReplies={handleReplies}
         handleAddtion={handleAddtion}
         handleSubtraction={handleSubtraction}
+        handleEdit={handleEdit}
       /> 
       <Footer 
         user={data.currentUser} 

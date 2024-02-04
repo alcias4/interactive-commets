@@ -8,9 +8,10 @@ interface Props {
   handleSubtraction:(id:number,replies: number| null)=> void
   handleReplies:(id: number,comment:string) => void
   handleAddtion:(id:number,replies: number| null)=> void
+  handleEdit:(id:number, replies:number| null)=>void
 }
 
-export const Main: React.FC<Props> = ({data, handleDelete,handleReplies, handleAddtion, handleSubtraction}) => {
+export const Main: React.FC<Props> = ({data, handleDelete,handleReplies, handleAddtion, handleSubtraction, handleEdit}) => {
   return (
     <ul className="content-comments">
       {
@@ -23,6 +24,7 @@ export const Main: React.FC<Props> = ({data, handleDelete,handleReplies, handleA
             handleReplies={handleReplies} 
             handleAddtion={handleAddtion}
             handleSubtraction={handleSubtraction}
+            handleEdit={handleEdit}
           />
         ))
       }

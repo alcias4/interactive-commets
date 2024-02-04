@@ -8,7 +8,6 @@ export const logicComments = (data: data, setDate:setDate) => {
 
   const handleChanceComment = (comments:string): void => {
     if (comments === ""){
-      alert("Text empty")
       return 
     }
    
@@ -46,7 +45,6 @@ export const logicComments = (data: data, setDate:setDate) => {
 
   const handleReplies = (id: number,comment:string) => {
     if (comment === ""){
-      alert("Text empty")
       return 
     }
     const newComments:repliesComment = {
@@ -67,5 +65,9 @@ export const logicComments = (data: data, setDate:setDate) => {
     setDate({currentUser: data.currentUser, comments: data.comments})
   }
 
-  return {handleDelete,handleReplies, handleChanceComment}
+  const handleEdit = (id: number, replies: number | null) => {
+   
+  }
+
+  return {handleDelete,handleReplies, handleChanceComment, handleEdit}
 }
