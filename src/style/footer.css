@@ -1,0 +1,42 @@
+
+
+footer {
+  display: flex;
+  gap: 20px;
+  width: 60%;
+  background-color: #ffffff;
+  padding: 20px;
+  max-width: 650px;
+}
+
+footer img {
+  width: 30px;
+  height: 30px;
+}
+
+footer textarea {
+  resize: none;
+  width: 70%;
+  height: 80px;
+  border: 1px solid #cccc;
+  border-radius: 5px;
+  outline: none;
+  padding: 10px 20px 10px 20px;
+}
+
+
+footer button {
+  background-color: #5358b6;
+  color: white;
+  border: none;
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all .5s ease;
+}
+
+
+footer button:hover {
+  opacity: 0.6;
+}

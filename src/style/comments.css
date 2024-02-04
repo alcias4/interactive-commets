@@ -1,0 +1,160 @@
+.card {
+  display: flex;
+  gap: 20px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: default;
+  min-height: 135px;
+}
+
+.card-button{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 40px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+}
+
+.card-button img {
+  cursor: pointer;
+  width: 15px;
+}
+
+.card-info{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  font-size: 13px;
+}
+
+.user span {
+  color: #97999b;
+}
+
+.user img {
+  width: 40px;
+}
+
+.edit {
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  right: 10px;
+}
+
+.edit button {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.edit button img {
+  width: 10px;
+}
+
+.edit button:nth-child(1) {
+  color: red;
+  font-weight:  600;
+}
+
+.edit button:nth-child(2) {
+  color: #6c6ba4;
+  font-weight:  600;
+}
+
+.you {
+  background-color: #6c6ba4;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+
+.reply {
+  display: flex;
+  position: absolute;
+  right: 10px;
+  border: none;
+  width: 60px;
+  align-items: center;
+  background-color: transparent;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 15;
+  font-weight: 600;
+  color: #6c6ba4;
+}
+
+.reply img {
+  width: 20px;
+}
+
+.contend {
+  color: #97999b;
+  font-size: 13px;
+}
+.content-subCart{
+  position: relative;
+}
+.content-subCart::after{
+  content: "";
+  width: 1px;
+  height: 100%;
+  background-color: #d9d9dac5;
+  z-index: 10;
+  position: absolute;
+  top: 0px;
+  left: 5%;
+}
+
+
+.subCard {
+  width: 90%;
+  margin-left: 10%;
+  margin-top: 20px;
+}
+
+.replyCard textarea{
+  width: 65%;
+  resize: none;
+  border: 1px solid #cccc;
+  border-radius: 5px;
+  outline: none;
+  padding: 10px 20px;
+}
+
+.replyCard img {
+  width: 50px;
+  height: 50px;
+}
+
+.replyCard button{
+  width: 20%;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  background-color: #5358b6;
+  cursor: pointer;
+  transition: all 500ms ease;
+}
+
+.replyCard button:hover {
+  opacity: 0.5;
+}
