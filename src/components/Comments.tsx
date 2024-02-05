@@ -20,13 +20,12 @@ interface Props {
 export const Comments: React.FC<Props>  = ({info,index ,user,handleDelete, handleReplies, handleAddtion, handleSubtraction,handleEdit}) => {
   const [comment ,setComments] = useState(false);
   const [update ,setUpdate] = useState(false);
-  const [text, setTex] = useState("")
   const handleReply  = () => {
     setComments(!comment)
     setUpdate(false)
   }
 
-  const handleUpdate = (id:number , replies:number | null, comment:string) => {
+  const handleUpdate = (id:number , replies:number | null) => {
     setUpdate(!update)
     setComments(false)
     handleEdit(id, replies )
@@ -60,7 +59,7 @@ export const Comments: React.FC<Props>  = ({info,index ,user,handleDelete, handl
                 <p>Delete</p>
               </button>
               <button
-                onClick={()=> handleUpdate(info.id,null, info.content)}
+                onClick={()=> handleUpdate(info.id,null)}
               >
               <img src="./images/icon-edit.svg" alt="" />
                 <p>Edit</p>
