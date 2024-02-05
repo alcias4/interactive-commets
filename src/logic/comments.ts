@@ -66,7 +66,8 @@ export const logicComments = (data: data, setDate:setDate) => {
   }
 
   const handleEdit = (id: number, replies: number | null) => {
-   alert(id)
+    const i = replies ? id + replies:id
+    alert(i)
   }
 
   return {handleDelete,handleReplies, handleChanceComment, handleEdit}
