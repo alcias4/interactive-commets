@@ -14,10 +14,9 @@ interface Props {
   handleSubtraction:(id:number, replies:number| null)=>void
   handleDelete:(id:number, replies:number| null)=>void
   handleReplies:(id:number,comment:string)=>void
-  handleEdit:(id:number, replies:number| null)=>void
 }
 
-export const Comments: React.FC<Props>  = ({info,index ,user,handleDelete, handleReplies, handleAddtion, handleSubtraction,handleEdit}) => {
+export const Comments: React.FC<Props>  = ({info,index ,user,handleDelete, handleReplies, handleAddtion, handleSubtraction}) => {
   const [comment ,setComments] = useState(false);
   const [update ,setUpdate] = useState(false);
   const handleReply  = () => {
@@ -25,11 +24,8 @@ export const Comments: React.FC<Props>  = ({info,index ,user,handleDelete, handl
     setUpdate(false)
   }
 
-  const handleUpdate = (id:number , replies:number | null) => {
+  const handleUpdate = () => {
     setUpdate(!update)
-    setComments(false)
-    handleEdit(id, replies )
-    
   }
   return (
     <li key={index}  style={{listStyle: "none"}}>
@@ -58,9 +54,7 @@ export const Comments: React.FC<Props>  = ({info,index ,user,handleDelete, handl
                 <img src="./images/icon-delete.svg" alt="" />
                 <p>Delete</p>
               </button>
-              <button
-                onClick={()=> handleUpdate(info.id,null)}
-              >
+              <button onClick={handleUpdate}>
               <img src="./images/icon-edit.svg" alt="" />
                 <p>Edit</p>
               </button>
@@ -91,6 +85,7 @@ export const Comments: React.FC<Props>  = ({info,index ,user,handleDelete, handl
               handleSubtraction={handleSubtraction}
               subInd={subInd}
               handleUpdate={handleUpdate}
+          
             />
           ))
         }

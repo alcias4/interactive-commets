@@ -9,7 +9,7 @@ interface Props {
   handleReply:()=>void
   handleAddtion: (id: number, replies:number | null) => void
   handleSubtraction: (id: number, replies:number | null) => void
-  handleUpdate:(id:number, replies:number| null)=>void
+  handleUpdate:()=> void
 }
 
 export const Card:React.FC<Props> = ({ info,index ,user, handleDelete,handleReply,handleAddtion, handleSubtraction, subInd, handleUpdate}) => {
@@ -40,7 +40,7 @@ export const Card:React.FC<Props> = ({ info,index ,user, handleDelete,handleRepl
                 <img src="./images/icon-delete.svg" alt="" />
                 <p>Delete</p>
               </button>
-              <button onClick={()=> handleUpdate(info.id, index)}>
+              <button onClick={handleUpdate} >
               <img 
                 src="./images/icon-edit.svg" alt="" />
                 <p>Edit</p>
