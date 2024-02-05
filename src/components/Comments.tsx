@@ -3,6 +3,7 @@ import "../style/comments.css"
 import { Card } from "./card"
 import { FloatComments } from "./FloatComments"
 import { useState } from "react"
+import { Update } from "./Update"
 
 
 interface Props {
@@ -18,8 +19,18 @@ interface Props {
 
 export const Comments: React.FC<Props>  = ({info,index ,user,handleDelete, handleReplies, handleAddtion, handleSubtraction,handleEdit}) => {
   const [comment ,setComments] = useState(false);
+  const [update ,setUpdate] = useState(false);
+  const [text, setTex] = useState("")
   const handleReply  = () => {
     setComments(!comment)
+    setUpdate(false)
+  }
+
+  const handleUpdate = (id:number , replies:number | null, comment:string) => {
+    setUpdate(!update)
+    setComments(false)
+    handleEdit(id, replies )
+    
   }
   return (
     <li key={index}  style={{listStyle: "none"}}>
@@ -49,7 +60,7 @@ export const Comments: React.FC<Props>  = ({info,index ,user,handleDelete, handl
                 <p>Delete</p>
               </button>
               <button
-                onClick={()=> {handleEdit(index, null)}}
+                onClick={()=> handleUpdate(info.id,null, info.content)}
               >
               <img src="./images/icon-edit.svg" alt="" />
                 <p>Edit</p>
@@ -80,10 +91,11 @@ export const Comments: React.FC<Props>  = ({info,index ,user,handleDelete, handl
               handleAddtion={handleAddtion}
               handleSubtraction={handleSubtraction}
               subInd={subInd}
-              handleEdit={handleEdit}
+              handleUpdate={handleUpdate}
             />
           ))
         }
+        <Update update={update} user={user} info={info}/>
         {
           comment ? 
           <FloatComments 
@@ -94,6 +106,7 @@ export const Comments: React.FC<Props>  = ({info,index ,user,handleDelete, handl
           /> 
           : null
         }
+        
       </div>
     </li>
   )
