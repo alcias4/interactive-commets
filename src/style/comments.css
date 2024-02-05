@@ -73,6 +73,12 @@
   transition: all 400ms ease;
 }
 
+.edit button span {
+  color: #6c6ba4;
+}
+
+
+
 .edit button:hover {
   opacity: 0.5;
 }
@@ -114,6 +120,10 @@
   font-weight: 600;
   color: #6c6ba4;
   transition: all 500ms ease;
+}
+
+.reply span {
+  color: #6c6ba4;
 }
 
 .reply:hover {

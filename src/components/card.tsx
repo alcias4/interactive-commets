@@ -38,19 +38,19 @@ export const Card:React.FC<Props> = ({ info,index ,user, handleDelete,handleRepl
             <div className="edit">
               <button onClick={()=>handleDelete(info.id,index)}>
                 <img src="./images/icon-delete.svg" alt="" />
-                <p>Delete</p>
+                <span>Delete</span>
               </button>
               <button onClick={handleUpdate} >
               <img 
                 src="./images/icon-edit.svg" alt="" />
-                <p>Edit</p>
+                <span>Edit</span>
               </button>
             </div>:
             <button 
               onClick={handleReply}
               className="reply">
               <img src="./images/icon-reply.svg" alt="icon of button" />
-              <p>Reply</p>
+              <span>Reply</span>
             </button>
           }
         </section>
