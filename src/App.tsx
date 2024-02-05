@@ -27,18 +27,19 @@ function App() {
 
   return (
     <>
-      <Main 
-        data={data} 
-        handleDelete={handleDelete} 
-        handleReplies={handleReplies}
-        handleAddtion={handleAddtion}
-        handleSubtraction={handleSubtraction}
-        
-      /> 
-      <Footer 
-        user={data.currentUser} 
-        handleChanceComment={handleChanceComment}
-      /> 
+        <Main 
+          data={data} 
+          handleDelete={handleDelete} 
+          handleReplies={handleReplies}
+          handleAddtion={handleAddtion}
+          handleSubtraction={handleSubtraction}
+          
+        /> 
+        <Footer 
+          user={data.currentUser} 
+          handleChanceComment={handleChanceComment}
+        /> 
+      
     </>
   )
 }
